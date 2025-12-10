@@ -1,0 +1,261 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Typography & base */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: "Georgia", "Times New Roman", serif;
+    color: #222;
+}
+
+p, li {
+    font-size: 0.95rem;
+}
+
+/* Layout helpers */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Header & navigation */
+header {
+    background-color: #222;
+    color: white;
+    padding: 10px 0 5px;
+    border-bottom: 4px solid #e67e22;
+}
+
+.brand {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.brand h1 {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
+
+.brand span {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #f5d7b3;
+}
+
+nav {
+    background-color: #111;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 8px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f9f9f9;
+    font-weight: bold;
+    font-family: "Verdana", Geneva, Tahoma, sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    color: #e67e22;
+}
+
+/* Hero section */
+.hero {
+    background: url("images/hero-placeholder.jpg") center/cover no-repeat, #333;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1rem;
+    max-width: 650px;
+    margin: 0 auto 15px;
+}
+
+.hero .btn-primary {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 22px;
+    background-color: #e67e22;
+    border-radius: 4px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero .btn-primary:hover {
+    background-color: #cf6d10;
+}
+
+/* Main layout & columns */
+main {
+    padding: 25px 0 60px;
+}
+
+.columns {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.column {
+    flex: 1;
+}
+
+/* Cards / boxes */
+.card {
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 18px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.card h2 {
+    margin-bottom: 8px;
+}
+
+.highlight {
+    color: #e67e22;
+}
+
+/* Menu grid */
+.menu-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.menu-item {
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 12px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.menu-item h3 {
+    font-size: 1rem;
+}
+
+.menu-item span.price {
+    font-weight: bold;
+    color: #e67e22;
+}
+
+/* Lists */
+ul.info-list {
+    list-style: none;
+    margin-top: 10px;
+}
+
+ul.info-list li {
+    margin-bottom: 6px;
+}
+
+/* Contact */
+.contact-details {
+    margin-top: 10px;
+}
+
+.contact-details p {
+    margin-bottom: 6px;
+}
+
+.contact-card strong {
+    display: inline-block;
+    width: 90px;
+}
+
+/* Simple form (static only) */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+button,
+input[type="submit"] {
+    padding: 9px 14px;
+    border: none;
+    border-radius: 4px;
+    background-color: #e67e22;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background-color: #cf6d10;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 0.85rem;
+}
+
+/* Responsive columns & menu */
+@media (min-width: 768px) {
+    .columns {
+        flex-direction: row;
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .menu-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
